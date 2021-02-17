@@ -1,16 +1,17 @@
+import React  from 'react';
 import { Link } from 'react-router-dom';
 import './Card.css';
-import dummy from '../static/dummy.png'
+import dummy from '../static/dummy.png';
+import Moment from 'react-moment';
 
 const Card = ({ job }) => {
-    console.log(job)
     return (
         <Link className="Card" to={`/job/${job.id}`}>
             <div className="JobLogo">
                 <img src={job.company_logo || dummy} alt="logo"/>
             </div>
             <div className="JobContent">
-                <p className="JobTime">{job.created_at}</p>
+                <p className="JobTime"><Moment fromNow>{job.created_at}</Moment></p>
                 <div className="spacer-dot"></div>
                 <p className="JobType">{job.type}</p>
             </div>

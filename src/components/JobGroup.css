@@ -1,10 +1,17 @@
 .JobGroup {
     max-width: 800px;
-    margin: 5% 15%;
+    margin: 6% 15%;
     display: grid;
     grid-template-columns: repeat(3, auto);
-    align-items: center;
+    align-items: stretch;
     justify-items: center;
-    grid-column-gap: 100px;
-    grid-row-gap: 100px;
+    grid-column-gap: 120px;
+    grid-row-gap: 60px;
+}
+
+.Loader {
+    position: absolute;
+    z-index: 15;
+    top: 50%;
+    left: 50%;
 }
