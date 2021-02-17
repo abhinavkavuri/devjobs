@@ -1,0 +1,10 @@
+.JobGroup {
+    max-width: 800px;
+    margin: 5% 15%;
+    display: grid;
+    grid-template-columns: repeat(3, auto);
+    align-items: center;
+    justify-items: center;
+    grid-column-gap: 100px;
+    grid-row-gap: 100px;
+}

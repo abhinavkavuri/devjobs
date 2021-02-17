@@ -1,0 +1,122 @@
+.Header {
+    height: 80px;
+    max-width: 100%;
+    position: fixed;
+    width: 100%;
+    padding: 51px 38px 0px 38px;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-image: url(../static/back.png);
+    border-bottom-left-radius: 300px;
+    z-index: 2;
+    transition: 0.8s cubic-bezier(0.2, 0.8, 0.2, 1);
+}
+
+
+.HeaderScrolled {
+    background: rgba(0, 0, 0, 0.8);
+    padding: 15px 0;
+}
+
+.HeaderGroup {
+    margin: auto auto;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-column-gap: 600px;
+    align-items: center;
+    justify-items: center;
+}
+
+.logo {
+    color: white;
+    font-size: 32px;
+    font-weight: 750;
+    text-decoration: none;
+}
+
+.Toggle {
+    align-items: center;
+    display: inline-flex;
+}
+
+.ToggleIcon img{
+    display: inline;
+    width: 35px;
+    height: 35px;
+    padding-right: 10px;
+    padding-left: 10px;
+}
+
+.toggle-container {
+    width: 60px;
+    background-color: white;
+    cursor: pointer;
+    user-select: none;
+    border-radius: 40px;
+    padding: 2px;
+    height: 25px;
+    position: relative;
+}
+
+.dialog-button {
+    cursor: pointer;
+    background-color: #19212D;
+    color: white;
+    padding: 12px 10px;
+    border-radius: 80%;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    min-width: 46px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 25px;
+    min-width: unset;
+    box-sizing: border-box;
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.25);
+    position: absolute;
+    left: 34px;
+    transition: all 0.3s ease;
+}
+
+.disabled {
+    background-color:  #5865E0;
+    left: 2px;
+}
+
+
+@media (max-width: 720px) {
+
+    .Header {
+        padding-top: 40px;
+        border-bottom-left-radius: 0px;
+    }
+
+    .HeaderGroup {
+        grid-column-gap: 100px;
+    }
+
+    .Toggle {
+        margin-top: -0.9rem;
+    }
+    
+}
+
+@media (max-width: 1200px) {
+
+    .Header {
+        padding-top: 50px;
+        border-bottom-left-radius: 0px;
+    }
+
+    .HeaderGroup {
+        grid-column-gap: 80px;
+    }
+
+    .Toggle {
+        margin-top: -0.9rem;
+        padding-right: 30px;
+    }
+
+
+    
+}
