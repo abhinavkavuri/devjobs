@@ -4,7 +4,7 @@
     display: grid;
     grid-template-columns: repeat(3, auto);
     align-items: stretch;
-    justify-items: center;
+    justify-items: stretch;
     grid-column-gap: 120px;
     grid-row-gap: 60px;
 }
@@ -14,4 +14,20 @@
     z-index: 15;
     top: 50%;
     left: 50%;
+}
+
+@media (max-width: 1400px) {
+
+    .JobGroup {
+        grid-template-columns: repeat(2, auto);
+    }
+    
+}
+
+@media (max-width: 1000px) {
+
+    .JobGroup {
+        grid-template-columns: repeat(1, auto);
+    }
+    
 }

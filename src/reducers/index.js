@@ -1,5 +1,5 @@
 import { combineReducers } from 'redux';
-import { DARK_ON, DARK_OFF, FETCH_JOBS } from '../actions/types';
+import { DARK_ON, DARK_OFF, FETCH_JOBS, FETCH_JOB } from '../actions/types';
 
 const INITIAL_STATE = {
     type: 'light'
@@ -25,7 +25,17 @@ const jobsReducer = (state = {}, action) => {
     }
 }
 
+const jobReducer = (state = {}, action) => {
+    switch(action.type){
+        case FETCH_JOB:
+            return { ...state, job: action.payload };
+        default:
+            return state;
+    }
+}
+
 export default combineReducers({
     theme: themeReducer,
-    jobs: jobsReducer
+    jobs: jobsReducer,
+    job: jobReducer
 });

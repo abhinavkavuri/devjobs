@@ -18,7 +18,7 @@ class JobGroup extends React.Component {
                 location: job.location,
             };
             return (
-                <Card job={dummy} />
+                <Card job={dummy}/>
             );
         }); 
     }
@@ -46,19 +46,3 @@ const mapStateToProps = (state) => {
 };
 
 export default connect(mapStateToProps, { })(JobGroup);
-
-
-// if(this.jobs === undefined){
-//     return (
-//         <div className="Loader">
-//             <Loader type="Grid" color="#00BFFF" height={80} width={80} />
-//         </div>
-//     );
-// }
-// else{
-//     return (
-//         <div className="JobGroup">
-//             {this.getJobs()}
-//         </div>
-//     );
-// }

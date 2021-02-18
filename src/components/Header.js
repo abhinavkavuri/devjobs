@@ -5,6 +5,7 @@ import { darkOn, darkOff } from '../actions';
 import './Header.css';
 import sun from '../static/moon.png';
 import moon from '../static/sun.png';
+import ThemeMonitor from './ThemeMonitor';
 
 class Header extends React.Component {
 
@@ -30,10 +31,14 @@ class Header extends React.Component {
     }
 
     onSwitch = (event) => {
-        if(this.props.type === 'light') 
+        if(this.props.type === 'light'){
             this.props.darkOn();
-        else 
+            ThemeMonitor('dark')
+        }
+        else{ 
             this.props.darkOff();
+            ThemeMonitor('light')
+        }
     }
 
     toggle = () => {

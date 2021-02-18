@@ -1,0 +1,283 @@
+.DetailContainer {
+    position: relative;
+    max-width: 300px;
+    padding: 100px 400px;
+}
+
+.JobDetailGroup {
+    margin: 0 auto;
+    position: absolute;
+    max-width: 100%;
+    max-height: 100%;
+    z-index: 99;
+    display: grid;
+    grid-template-columns: repeat(1, auto);
+    justify-items: center;
+}
+
+.Company {
+    width: 100%;
+    text-align: center;
+    border-radius: 10px;
+    padding: 0 38px 2rem 38px;
+    background-color: white;
+    transition: 300ms ease-in-out white;
+    display: grid;
+    grid-template-columns: repeat(3, auto);
+    grid-column-gap: 100px;
+    align-items: center;
+    justify-items: center;
+}
+
+.Company img {
+    width: 80px;
+    height: 80px;
+    border-radius: 1.8px;
+    margin-top: 12px;
+}
+
+.CompanyGroup {
+    margin-top: -0.1rem;
+}
+
+.CompanyTitle {
+    margin-bottom: 0.9rem;
+    font-size: 18px;
+    line-height: 38px;
+    color: #19202d;
+    font-weight: 750;
+    transition: 300ms ease-in-out #19202d;
+    float: left;
+}
+
+.CompanyUrl {
+    margin-top: 0.5px;
+    margin-bottom: 2rem;
+    color: #6e8098;
+    font-size: 16px;
+    line-height: 30px;
+    font-weight: 400;
+}
+
+.btn {
+    padding: 10px 14px 10px 14px;
+    font-size: 16px;
+    line-height: 1.3rem;
+    font-weight: bold;
+    border-radius: 10px;
+    border: none;
+    cursor: pointer;
+    font-weight: 500;
+    text-decoration: none;
+}
+
+.btn-Company {
+    margin-top: 38px;
+    background-color: #d9e1f3;
+    color: #5964e0;
+}
+
+.JobDetail {
+    margin-top: 40px;
+    border-radius: 10px;
+    width: 100%;
+    height: fit-content;
+    padding: 64px 38px 51px;
+    background-color: white;
+    transition: 300ms ease-in-out white;
+}
+
+.jobHeading {
+    display: flex;
+    flex-flow: column nowrap;
+}
+
+.JobDetailTime {
+    display: flex;
+    margin-top: -12px;
+    align-items: center;
+    justify-items: center;
+    color: #6e8098;
+    font-size: 16px;
+    line-height: 30px;
+    font-weight: 400;
+}
+
+.Details-dot {
+    width: 6.4px;
+    height: 6.4px;
+    margin: 0 19px;
+    border-radius: 50%;
+    background-color: #6e8098;
+}
+
+.JobDetailTitle {
+    margin: 10px 0;
+    font-size: 22px;
+    line-height: 38px;
+    color: #19202d;
+    font-weight: 750;
+    transition: 300ms ease-in-out #19202d;
+}
+
+.JobDetailLocation {
+    margin-top: auto;
+    color: #5964e0;
+    font-size: 16px;
+    line-height: 1.8rem;
+    font-weight: 700;
+}
+
+.btn-apply {
+    margin-top: -5rem;
+    background-color: #5964e0;
+    color: white;
+    align-self: center;
+    float: right;
+}
+
+.JobDescription {
+    color: #6e8098;
+    font-size: 16px;
+    line-height: 30px;
+    font-weight: 400;
+}
+
+.JobHow {
+    margin-top: 40px;
+    border-radius: 10px;
+    width: 100%;
+    height: fit-content;
+    padding: 64px 38px 51px;
+    background-color: #5964e0;
+    opacity: 0.9;
+    transition: 300ms ease-in-out #5964e0;
+}
+
+.JobHowHeading {
+    margin: 10px 0;
+    font-size: 22px;
+    line-height: 38px;
+    color: white;
+    font-weight: 750;
+    transition: 300ms ease-in-out white;
+}
+
+.JobHowDescription {
+    color: white;
+    font-size: 16px;
+    line-height: 30px;
+    font-weight: 400;
+}
+
+.JobHowDescription a {
+    color: white;
+}
+
+.CompanyFooter {
+    width: 100%;
+    text-align: center;
+    border-radius: 10px;
+    padding: 0 38px 1rem 38px;
+    background-color: rgba(255, 255, 255);
+    transition: 300ms ease-in-out white;
+    display: grid;
+    grid-template-columns: repeat(3, auto);
+    grid-column-gap: 100px;
+    align-items: center;
+    justify-items: center;
+    height: fit-content;
+    margin-bottom: 2px;
+    margin-top: 40px;
+}
+
+.btn-apply-footer {
+    background-color: #5964e0;
+    color: white;
+    float: right;
+}
+
+.Loader {
+    position: absolute;
+    z-index: 15;
+    top: 50%;
+    left: 50%;
+}
+
+@media only screen and (min-width: 2200px) and (max-width: 3000px) {
+    .DetailContainer {
+        padding: 100px 720px;
+    }
+}
+
+@media only screen and (min-width: 2000px) and (max-width: 2200px) {
+    .DetailContainer {
+        padding: 100px 600px;
+    }
+}
+
+@media only screen and (min-width: 1860px) and (max-width: 2000px) {
+    .DetailContainer {
+        padding: 100px 550px;
+    }
+}
+
+@media only screen and (min-width: 1500px) and (max-width: 1800px) {
+    .DetailContainer {
+        padding: 100px 450px;
+    }
+}
+
+@media only screen and (min-width: 1250px) and (max-width: 1500px) {
+    .DetailContainer {
+        padding: 100px 350px;
+    }
+}
+
+@media only screen and (min-width: 1000px) and (max-width: 1250px) {
+    .DetailContainer {
+        padding: 100px 300px;
+    }
+}
+
+@media only screen and (min-width: 900px) and (max-width: 1000px) {
+    .DetailContainer {
+        max-width: 200px;
+        padding: 100px 250px;
+    }
+}
+
+@media only screen and (min-width: 850px) and (max-width: 900px) {
+    .DetailContainer {
+        max-width: 200px;
+        padding: 100px 200px;
+    }
+}
+
+@media only screen and (min-width: 750px) and (max-width: 850px) {
+    .DetailContainer {
+        max-width: 150px;
+        padding: 100px 150px;
+    }
+}
+
+@media only screen and (min-width: 640px) and (max-width: 750px) {
+    .DetailContainer {
+        max-width: 100px;
+        padding: 100px 100px;
+    }
+}
+
+@media only screen and (min-width: 600px) and (max-width: 650px) {
+    .DetailContainer {
+        max-width: 50px;
+        padding: 100px 50px;
+    }
+}
+
+@media only screen and (min-width: 550px) and (max-width: 600px) {
+    .DetailContainer {
+        max-width: 50px;
+        padding: 100px 5px;
+    }
+}

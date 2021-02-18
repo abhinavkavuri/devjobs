@@ -1,17 +1,17 @@
-.Container{
+.Container {
     padding: 110px 300px;
     max-width: 100%;
     position: relative;
 }
 
 .SearchGroup {
-      border-radius: 10px;
-      background-color: white;
-      transition: 300ms ease-in-out;
-      position: absolute;
-      width: 60%;
-      height: 45%;
-      z-index: 10;
+    border-radius: 10px;
+    background-color: white;
+    transition: 300ms ease-in-out;
+    position: absolute;
+    width: 60%;
+    height: 45%;
+    z-index: 10;
 }
 
 .SearchForm {
@@ -24,35 +24,34 @@
     padding-bottom: 25px;
 }
 
-.input-group {
+.InputGroup {
     padding: 44px 0;
     background-repeat: no-repeat;
     background-position: left center;
 }
 
-.input-group--title {
+.InputTitle {
     padding-left: 48px;
     padding-right: 16px;
     background-image: url(../static/search.png);
 }
 
-.input-group--title input {
+.InputTitle input {
     border: none;
 }
 
-
-.input-group--location {
+.InputLocation {
     padding-left: 48px;
     padding-right: 16px;
     margin-left: 39px;
-    background-image: url(../static/location.png); 
+    background-image: url(../static/location.png);
 }
 
-.input-group--location input {
+.InputLocation input {
     border: none;
 }
 
-.input-group--checkbox {
+.InputCheckbox {
     width: 10px;
     overflow: hidden;
     margin-left: 3px;
@@ -62,14 +61,14 @@
     cursor: pointer;
 }
 
-.input-divider {
+.InputDivider {
     width: 3px;
     height: 60%;
-    opacity: .20;
-    background-color: #6E8098;
+    opacity: 0.2;
+    background-color: #6e8098;
 }
 
-.input-label {
+.InputLabel {
     font-size: 15px;
     padding-left: 10px;
     font-weight: 700;
@@ -92,109 +91,320 @@
     opacity: 0.8;
 }
 
-/* @media (max-width: 720px) {
-
-    .SearchForm {
-        grid-column-gap: 1px;
-        overflow: hidden;
-        grid-template-columns: repeat(2, auto);
-    }
-
-    .SearchForm .btn-search:nth-child(6) { 
-        
-        margin-left: 50px;
-        font-size: 0;
-        width: 50px;
-        height: 50px;
-        background-image: url(../static/search.png);
-        background-repeat: no-repeat;
-        background-position: center;
-        position: right;
-    }
-
-    .SearchForm .input-group--checkbox:nth-child(5) { 
+@media (max-width: 1400px) {
+    .SearchForm .InputCheckbox:nth-child(5) {
         display: none;
     }
 
-    .SearchForm .input-divider:nth-child(4) { 
+    .SearchForm .InputDivider:nth-child(4) {
         display: none;
     }
-
-    .SearchForm .input-group--location:nth-child(3) { 
-        display: none;
-    }
-
-    .SearchForm .input-divider:nth-child(2) { 
-        display: none;
-    }
-
-    .SearchForm .input-group--title:nth-child(1) {
-        background-image: none;
-        padding-left: 1rem;
-    }
-
-    .SearchGroup {
-        transform: translateX(-50%);
-    }
-} */
-
-
-@media (max-width: 1200px) {
-    
-    .SearchGroup {
-        transform: translateX(-50%);
-    }
-
-    .SearchForm {
-        grid-column-gap: 1px;
-        overflow: hidden;
-        grid-template-columns: repeat(2, auto);
-    }
-
-    .SearchForm .btn-search { 
-        
-        margin-left: 50px;
-        font-size: 0;
-        width: 50px;
-        height: 50px;
-        background-image: url(../static/search.png);
-        background-repeat: no-repeat;
-        background-position: center;
-        position: right;
-    }
-
-    .SearchForm .input-group--checkbox { 
-        display: none;
-    }
-
-    .SearchForm .input-divider { 
-        display: none;
-    }
-
-    .SearchForm .input-group--location { 
-        display: none;
-    }
-
-    .SearchForm .input-divider{ 
-        display: none;
-    }
-
-    .SearchForm .input-group--title {
-        background-image: none;
-        padding-left: 1rem;
-    }
-
 }
 
+@media only screen and (min-width: 1000px) and (max-width: 1200px) {
+    .SearchGroup {
+        transform: translateX(-10%);
+    }
 
- @media (max-width: 1400px) {
+    .SearchForm {
+        grid-column-gap: 1px;
+        overflow: hidden;
+        grid-template-columns: repeat(2, auto);
+    }
 
-    .SearchForm .input-group--checkbox:nth-child(5) { 
+    .SearchForm .btn-search {
+        margin-left: 50px;
+        font-size: 0;
+        width: 50px;
+        height: 50px;
+        background-image: url(../static/search.png);
+        background-repeat: no-repeat;
+        background-position: center;
+        position: right;
+    }
+
+    .SearchForm .InputCheckbox {
         display: none;
     }
 
-    .SearchForm .input-divider:nth-child(4) { 
+    .SearchForm .InputDivider {
         display: none;
     }
 
+    .SearchForm .InputLocation {
+        display: none;
+    }
+
+    .SearchForm .InputDivider {
+        display: none;
+    }
+
+    .SearchForm .InputTitle {
+        background-image: none;
+        padding-left: 16px;
+    }
+}
+
+@media only screen and (min-width: 950px) and (max-width: 1000px) {
+    .SearchGroup {
+        transform: translateX(-25%);
+    }
+
+    .SearchForm {
+        grid-column-gap: 1px;
+        overflow: hidden;
+        grid-template-columns: repeat(2, auto);
+    }
+
+    .SearchForm .btn-search {
+        margin-left: 50px;
+        font-size: 0;
+        width: 50px;
+        height: 50px;
+        background-image: url(../static/search.png);
+        background-repeat: no-repeat;
+        background-position: center;
+        position: right;
+    }
+
+    .SearchForm .InputCheckbox {
+        display: none;
+    }
+
+    .SearchForm .InputDivider {
+        display: none;
+    }
+
+    .SearchForm .InputLocation {
+        display: none;
+    }
+
+    .SearchForm .InputDivider {
+        display: none;
+    }
+
+    .SearchForm .InputTitle {
+        background-image: none;
+        padding-left: 16px;
+    }
+}
+
+@media only screen and (min-width: 900px) and (max-width: 950px) {
+    .SearchGroup {
+        transform: translateX(-35%);
+    }
+
+    .SearchForm {
+        grid-column-gap: 1px;
+        overflow: hidden;
+        grid-template-columns: repeat(2, auto);
+    }
+
+    .SearchForm .btn-search {
+        margin-left: 50px;
+        font-size: 0;
+        width: 50px;
+        height: 50px;
+        background-image: url(../static/search.png);
+        background-repeat: no-repeat;
+        background-position: center;
+        position: right;
+    }
+
+    .SearchForm .InputCheckbox {
+        display: none;
+    }
+
+    .SearchForm .InputDivider {
+        display: none;
+    }
+
+    .SearchForm .InputLocation {
+        display: none;
+    }
+
+    .SearchForm .InputDivider {
+        display: none;
+    }
+
+    .SearchForm .InputTitle {
+        background-image: none;
+        padding-left: 16px;
+    }
+}
+
+@media only screen and (min-width: 800px) and (max-width: 900px) {
+    .SearchGroup {
+        transform: translateX(-40%);
+    }
+
+    .SearchForm {
+        grid-column-gap: 1px;
+        overflow: hidden;
+        grid-template-columns: repeat(2, auto);
+    }
+
+    .SearchForm .btn-search {
+        margin-left: 50px;
+        font-size: 0;
+        width: 50px;
+        height: 50px;
+        background-image: url(../static/search.png);
+        background-repeat: no-repeat;
+        background-position: center;
+        position: right;
+    }
+
+    .SearchForm .InputCheckbox {
+        display: none;
+    }
+
+    .SearchForm .InputDivider {
+        display: none;
+    }
+
+    .SearchForm .InputLocation {
+        display: none;
+    }
+
+    .SearchForm .InputDivider {
+        display: none;
+    }
+
+    .SearchForm .InputTitle {
+        background-image: none;
+        padding-left: 16px;
+    }
+}
+
+@media only screen and (min-width: 800px) and (max-width: 850px) {
+    .SearchGroup {
+        transform: translateX(-40%);
+    }
+
+    .SearchForm {
+        grid-column-gap: 1px;
+        overflow: hidden;
+        grid-template-columns: repeat(2, auto);
+    }
+
+    .SearchForm .btn-search {
+        margin-left: 50px;
+        font-size: 0;
+        width: 50px;
+        height: 50px;
+        background-image: url(../static/search.png);
+        background-repeat: no-repeat;
+        background-position: center;
+        position: right;
+    }
+
+    .SearchForm .InputCheckbox {
+        display: none;
+    }
+
+    .SearchForm .InputDivider {
+        display: none;
+    }
+
+    .SearchForm .InputLocation {
+        display: none;
+    }
+
+    .SearchForm .InputDivider {
+        display: none;
+    }
+
+    .SearchForm .InputTitle {
+        background-image: none;
+        padding-left: 16px;
+    }
+}
+
+@media only screen and (min-width: 700px) and (max-width: 800px) {
+    .SearchGroup {
+        transform: translateX(-50%);
+    }
+
+    .SearchForm {
+        grid-column-gap: 1px;
+        overflow: hidden;
+        grid-template-columns: repeat(2, auto);
+    }
+
+    .SearchForm .btn-search {
+        margin-left: 50px;
+        font-size: 0;
+        width: 50px;
+        height: 50px;
+        background-image: url(../static/search.png);
+        background-repeat: no-repeat;
+        background-position: center;
+        position: right;
+    }
+
+    .SearchForm .InputCheckbox {
+        display: none;
+    }
+
+    .SearchForm .InputDivider {
+        display: none;
+    }
+
+    .SearchForm .InputLocation {
+        display: none;
+    }
+
+    .SearchForm .InputDivider {
+        display: none;
+    }
+
+    .SearchForm .InputTitle {
+        background-image: none;
+        padding-left: 16px;
+    }
+}
+
+@media only screen and (min-width: 600px) and (max-width: 700px) {
+    .SearchGroup {
+        transform: translateX(-55%);
+    }
+
+    .SearchForm {
+        grid-column-gap: 1px;
+        overflow: hidden;
+        grid-template-columns: repeat(2, auto);
+    }
+
+    .SearchForm .btn-search {
+        margin-left: 50px;
+        font-size: 0;
+        width: 50px;
+        height: 50px;
+        background-image: url(../static/search.png);
+        background-repeat: no-repeat;
+        background-position: center;
+        position: right;
+    }
+
+    .SearchForm .InputCheckbox {
+        display: none;
+    }
+
+    .SearchForm .InputDivider {
+        display: none;
+    }
+
+    .SearchForm .InputLocation {
+        display: none;
+    }
+
+    .SearchForm .InputDivider {
+        display: none;
+    }
+
+    .SearchForm .InputTitle {
+        background-image: none;
+        padding-left: 16px;
+    }
 }

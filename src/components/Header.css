@@ -18,6 +18,7 @@
     padding: 15px 0;
     height: 40px;
     border-bottom-left-radius: 0px;
+    z-index: 999;
 }
 
 .HeaderGroup {
@@ -118,7 +119,5 @@
         margin-top: -0.9rem;
         padding-right: 30px;
     }
-
-
     
 }
