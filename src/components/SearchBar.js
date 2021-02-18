@@ -7,12 +7,15 @@ class SearchBar extends React.Component {
     state = { title: "", location: "", fulltime: false, lat: "", long: "" };
 
     componentDidMount() {
-        navigator.geolocation.getCurrentPosition((position) => {
-            this.setState({
-                long: position.coords.latitude,
-                lat: position.coords.longitude,
+        const geoapi = navigator.geolocation;
+        if(geoapi != undefined){
+            geoapi.getCurrentPosition((position) => {
+                this.setState({
+                    long: position.coords.latitude,
+                    lat: position.coords.longitude,
+                });
             });
-        });
+        }
     }
 
     onFormSubmit = (event) => {
