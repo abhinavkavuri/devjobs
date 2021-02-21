@@ -1,32 +1,38 @@
 .DetailContainer {
-    position: relative;
-    max-width: 300px;
-    padding: 100px 400px;
+    width: 100%;
+    display: grid;
+    justify-content: center;
+    align-content: center;
 }
 
 .JobDetailGroup {
-    margin: 0 auto;
-    position: absolute;
-    max-width: 100%;
-    max-height: 100%;
+    margin-top: 90px;
+    max-width: 300px;
     z-index: 99;
     display: grid;
     grid-template-columns: repeat(1, auto);
-    justify-items: center;
+    justify-content: center;
+    align-content: center;
+    grid-row-gap: 70px;
 }
 
 .Company {
     width: 100%;
+    padding: 0 38px 10px 38px;
     text-align: center;
     border-radius: 10px;
-    padding: 0 38px 2rem 38px;
     background-color: white;
-    transition: 300ms ease-in-out white;
     display: grid;
     grid-template-columns: repeat(3, auto);
     grid-column-gap: 100px;
     align-items: center;
     justify-items: center;
+    transition: 0.8s cubic-bezier(0.2, 0.8, 0.2, 1);
+}
+
+.Company:hover {
+    transform: scale(1.1, 1.1);
+    box-shadow: 0 30px 60px rgba(0, 0, 0, 0.5);
 }
 
 .Company img {
@@ -71,6 +77,30 @@
     text-decoration: none;
 }
 
+.btn-disabled {
+    padding: 10px 14px 10px 14px;
+    font-size: 16px;
+    line-height: 1.3rem;
+    font-weight: bold;
+    border-radius: 10px;
+    border: none;
+    cursor: no-drop;
+    font-weight: 500;
+    text-decoration: none;
+}
+
+.btn:hover {
+    color: black;
+    background: white;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.25);
+    transform: translateY(-3px);
+}
+
+
+.btn:focus {
+    outline: none;
+}
+
 .btn-Company {
     margin-top: 38px;
     background-color: #d9e1f3;
@@ -78,13 +108,17 @@
 }
 
 .JobDetail {
-    margin-top: 40px;
     border-radius: 10px;
     width: 100%;
-    height: fit-content;
-    padding: 64px 38px 51px;
+    height: 100%;
+    padding: 20px 38px 20px 38px;
     background-color: white;
-    transition: 300ms ease-in-out white;
+    transition: 0.8s cubic-bezier(0.2, 0.8, 0.2, 1);
+}
+
+.JobDetail:hover {
+    transform: scale(1.1, 1.1);
+    box-shadow: 0 30px 60px rgba(0, 0, 0, 0.5);
 }
 
 .jobHeading {
@@ -144,14 +178,18 @@
 }
 
 .JobHow {
-    margin-top: 40px;
     border-radius: 10px;
     width: 100%;
     height: fit-content;
     padding: 64px 38px 51px;
     background-color: #5964e0;
     opacity: 0.9;
-    transition: 300ms ease-in-out #5964e0;
+    transition: 0.8s cubic-bezier(0.2, 0.8, 0.2, 1);
+}
+
+.JobHow:hover {
+    transform: scale(1.1, 1.1);
+    box-shadow: 0 30px 60px rgba(0, 0, 0, 0.5);
 }
 
 .JobHowHeading {
@@ -180,15 +218,19 @@
     border-radius: 10px;
     padding: 0 38px 1rem 38px;
     background-color: rgba(255, 255, 255);
-    transition: 300ms ease-in-out white;
+    transition: 0.8s cubic-bezier(0.2, 0.8, 0.2, 1);
     display: grid;
-    grid-template-columns: repeat(3, auto);
+    grid-template-columns: repeat(2, auto);
     grid-column-gap: 100px;
     align-items: center;
     justify-items: center;
     height: fit-content;
     margin-bottom: 2px;
-    margin-top: 40px;
+}
+
+.CompanyFooter:hover {
+    transform: scale(1.1, 1.1);
+    box-shadow: 0 30px 60px rgba(0, 0, 0, 0.5);
 }
 
 .btn-apply-footer {
@@ -204,80 +246,38 @@
     left: 50%;
 }
 
-@media only screen and (min-width: 2200px) and (max-width: 3000px) {
-    .DetailContainer {
-        padding: 100px 720px;
+@media only screen and (max-width : 1000px) {
+
+    .JobDetailGroup {
+        margin-top: 80px;
+    }
+
+    .Company {
+        width: 80%;
+        grid-column-gap: 20px;
+    }
+    
+    .JobDetail { 
+        width: 80%;
+    }
+
+    .JobHow {
+        width: 80%;
+    }
+
+    .CompanyFooter {
+        width: 80%;
     }
 }
 
-@media only screen and (min-width: 2000px) and (max-width: 2200px) {
-    .DetailContainer {
-        padding: 100px 600px;
-    }
-}
+@media only screen and (max-width : 640px) {
 
-@media only screen and (min-width: 1860px) and (max-width: 2000px) {
-    .DetailContainer {
-        padding: 100px 550px;
+    .Company {
+        grid-template-columns: repeat(1, auto);
     }
-}
 
-@media only screen and (min-width: 1500px) and (max-width: 1800px) {
-    .DetailContainer {
-        padding: 100px 450px;
+    .CompanyFooter .CompanyGroup {
+        display: none;
     }
-}
 
-@media only screen and (min-width: 1250px) and (max-width: 1500px) {
-    .DetailContainer {
-        padding: 100px 350px;
-    }
-}
-
-@media only screen and (min-width: 1000px) and (max-width: 1250px) {
-    .DetailContainer {
-        padding: 100px 300px;
-    }
-}
-
-@media only screen and (min-width: 900px) and (max-width: 1000px) {
-    .DetailContainer {
-        max-width: 200px;
-        padding: 100px 250px;
-    }
-}
-
-@media only screen and (min-width: 850px) and (max-width: 900px) {
-    .DetailContainer {
-        max-width: 200px;
-        padding: 100px 200px;
-    }
-}
-
-@media only screen and (min-width: 750px) and (max-width: 850px) {
-    .DetailContainer {
-        max-width: 150px;
-        padding: 100px 150px;
-    }
-}
-
-@media only screen and (min-width: 640px) and (max-width: 750px) {
-    .DetailContainer {
-        max-width: 100px;
-        padding: 100px 100px;
-    }
-}
-
-@media only screen and (min-width: 600px) and (max-width: 650px) {
-    .DetailContainer {
-        max-width: 50px;
-        padding: 100px 50px;
-    }
-}
-
-@media only screen and (min-width: 550px) and (max-width: 600px) {
-    .DetailContainer {
-        max-width: 50px;
-        padding: 100px 5px;
-    }
 }

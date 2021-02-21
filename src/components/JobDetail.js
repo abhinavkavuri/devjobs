@@ -12,12 +12,13 @@ class JobDetail extends React.Component {
         this.props.fetchJob(id);
     }
 
-    onApplyClick() {
-        console.log("applied");
+    onApplyClick = () => {
+        console.log('Redirecting');
     }
 
     render() {
         const job = this.props.job.job;
+
         if (Object.keys(this.props.job).length === 0) {
             return (
                 <div className="Loader">
@@ -40,7 +41,7 @@ class JobDetail extends React.Component {
                                 <p className="CompanyUrl">{job.company_url}</p>
                             </div>
                             <a
-                                className="btn btn-Company"
+                                className={`${job.company_url === null ? 'btn-disabled': 'btn'} btn-Company`}
                                 href={job.company_url}
                                 target="_blank"
                             >
@@ -64,7 +65,7 @@ class JobDetail extends React.Component {
                                     {job.location}
                                 </p>
                                 <button
-                                    className="btn btn-apply"
+                                    className={`${job.company_url === null ? 'btn-disabled': 'btn'} btn-apply`}
                                     onClick={this.onApplyClick}
                                 >
                                     Apply Now
@@ -96,7 +97,7 @@ class JobDetail extends React.Component {
                                 <p className="CompanyUrl">{job.company_url}</p>
                             </div>
                             <a
-                                className="btn btn-apply-footer"
+                                className={`${job.company_url === null ? 'btn-disabled': 'btn'} btn-apply-footer`}
                                 href={job.company_url}
                                 target="_blank"
                             >
@@ -115,11 +116,3 @@ const mapStateToProps = (state) => {
 };
 
 export default connect(mapStateToProps, { fetchJob })(JobDetail);
-
-// if(Object.keys(this.props.job).length === 0){
-//     return (
-//         <div className="Loader">
-//                 <Loader type="TailSpin" color="#00BFFF" height={80} width={80} />
-//         </div>
-//     );
-// }

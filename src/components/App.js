@@ -9,35 +9,30 @@ import history from '../history';
 import JobDetail from "./JobDetail";
 
 
+// https://cors-anywhere.herokuapp.com/corsdemo
+
 class App extends React.Component {
-
-  constructor(props) {
-    super(props);
-  }
-
+  
   render() {
     return (
       <Router history={history}>
-        <div className={`App ${this.props.type ? 'light': 'dark'}`}>
-
+        <div>
+        <Header />
           <Switch>
               <Route path="/" exact render={() =>
                   <Fragment>
-                    <Header />
                     <SearchBar />
                     <JobGroup />
                   </Fragment>
                   } 
               />
               <Route path="/job/:id" exact render={() =>
-                  <Fragment>
-                    <Header />
+                  <Fragment>                    
                     <JobDetail />
                   </Fragment>
                   } 
               />
           </Switch>
-
         </div>
       </Router>
     );
@@ -49,3 +44,5 @@ const mapStateToProps = (state) => {
 };
 
 export default connect(mapStateToProps, {})(App);
+
+// className={`App ${this.props.type ? 'light': 'dark'}`}

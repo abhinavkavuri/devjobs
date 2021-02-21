@@ -1,9 +1,16 @@
 const ThemeMonitor = (mode) => {
 
-    var searchBox = document.body.querySelector(".SearchGroup");
+    // search bar
+    var searchBox = document.body.querySelector(".SearchForm");
     var boxText = document.body.querySelector(".InputLabel");
+    var titleBox = document.body.querySelector(".InputTitle input");
+    var locationBox = document.body.querySelector(".InputLocation input");
+
+    // Cards
     var cards = document.body.querySelectorAll(".Card");
     var titles = document.body.querySelectorAll(".JobTitle");
+
+    // job detail
 
     var companySection = document.body.querySelector(".Company");
     var companyTitle = document.body.querySelectorAll(".CompanyTitle");
@@ -16,11 +23,19 @@ const ThemeMonitor = (mode) => {
 
 
     if (mode === "light") {
-        console.log("light on");
         document.body.style.backgroundColor = "#F5F6F8";
 
         if (searchBox != null) searchBox.style.backgroundColor = "white";
         if (boxText != null) boxText.style.color = "black";
+        if (titleBox != null){
+            titleBox.style.backgroundColor = "white";
+            titleBox.style.color = "black";
+        }
+        if (locationBox != null) {
+            locationBox.style.backgroundColor = "white";
+            locationBox.style.color = "black";
+        }
+
         if (cards.length != 0) cards.forEach((element) => { element.style.backgroundColor = "white"; });
         if (titles.length != 0) titles.forEach((element) => { element.style.color = "#19202d"; });
         if(companySection != null) companySection.style.backgroundColor = "white";
@@ -33,11 +48,20 @@ const ThemeMonitor = (mode) => {
     }
 
     if (mode === "dark") {
-        console.log("dark on");
         document.body.style.backgroundColor = "#131822";
 
         if (searchBox != null) searchBox.style.backgroundColor = "#19202d";
         if (boxText != null) boxText.style.color = "white";
+        if (titleBox != null){ 
+            titleBox.style.backgroundColor = "#19202d";
+            titleBox.style.color = "white";
+        }
+
+        if (locationBox != null){ 
+            locationBox.style.backgroundColor = "#19202d";
+            locationBox.style.color = "white";
+        }
+
         if (cards.length != 0) cards.forEach((element) => { element.style.backgroundColor = "#19202d"; });
         if (titles.length != 0) titles.forEach((element) => { element.style.color = "white"; });
         if(companySection != null) companySection.style.backgroundColor = "#19202d";

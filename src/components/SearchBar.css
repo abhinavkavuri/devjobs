@@ -1,31 +1,33 @@
-.Container {
-    padding: 110px 300px;
-    max-width: 100%;
-    position: relative;
-}
-
 .SearchGroup {
-    border-radius: 10px;
-    background-color: white;
-    transition: 300ms ease-in-out;
-    position: absolute;
-    width: 60%;
-    height: 45%;
-    z-index: 10;
+    padding-top: 90px;
+    width: 100%;
+    display: grid;
+    justify-content: center;
+    align-content: center;
 }
 
 .SearchForm {
     display: grid;
+    width: fit-content;
+    height: fit-content;
+    border-radius: 10px;
     grid-template-columns: repeat(6, auto);
     align-items: center;
+    background-color: white;
     justify-items: center;
     padding-left: 30px;
-    padding-right: 25px;
-    padding-bottom: 25px;
+    padding-right: 20px;
+    transition: 0.9s cubic-bezier(0.2, 0.8, 0.2, 1);
+    z-index: 10;
+}
+
+.SearchForm:hover {
+    transform: scale(1.1, 1.1);
+    box-shadow: 0 30px 60px rgba(0, 0, 0, 0.5);
 }
 
 .InputGroup {
-    padding: 44px 0;
+    padding: 25px 0;
     background-repeat: no-repeat;
     background-position: left center;
 }
@@ -38,26 +40,34 @@
 
 .InputTitle input {
     border: none;
+    height: 20px;
+    font-size: 14pt;
+}
+
+.InputGroup input:focus {
+    outline: none;
 }
 
 .InputLocation {
     padding-left: 48px;
-    padding-right: 16px;
+    padding-right: 10px;
     margin-left: 39px;
     background-image: url(../static/location.png);
 }
 
 .InputLocation input {
     border: none;
+    height: 20px;
+    font-size: 14pt;
 }
 
 .InputCheckbox {
     width: 10px;
     overflow: hidden;
-    margin-left: 3px;
+    margin-left: 15px;
     min-width: 140px;
     white-space: nowrap;
-    margin-right: 45px;
+    margin-right: 40px;
     cursor: pointer;
 }
 
@@ -88,41 +98,24 @@
 }
 
 .btn-search:hover {
-    opacity: 0.8;
+    color: black;
+    background: white;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.25);
+    transform: translateY(-3px);
 }
 
-@media (max-width: 1400px) {
-    .SearchForm .InputCheckbox:nth-child(5) {
-        display: none;
-    }
-
-    .SearchForm .InputDivider:nth-child(4) {
-        display: none;
-    }
+.btn-search:focus {
+    outline: none;
 }
 
-@media only screen and (min-width: 1000px) and (max-width: 1200px) {
+
+
+@media only screen and (max-width : 1000px)
+{   
     .SearchGroup {
-        transform: translateX(-10%);
+        padding-top: 80px;
     }
-
-    .SearchForm {
-        grid-column-gap: 1px;
-        overflow: hidden;
-        grid-template-columns: repeat(2, auto);
-    }
-
-    .SearchForm .btn-search {
-        margin-left: 50px;
-        font-size: 0;
-        width: 50px;
-        height: 50px;
-        background-image: url(../static/search.png);
-        background-repeat: no-repeat;
-        background-position: center;
-        position: right;
-    }
-
+    
     .SearchForm .InputCheckbox {
         display: none;
     }
@@ -139,272 +132,41 @@
         display: none;
     }
 
-    .SearchForm .InputTitle {
-        background-image: none;
-        padding-left: 16px;
-    }
-}
-
-@media only screen and (min-width: 950px) and (max-width: 1000px) {
-    .SearchGroup {
-        transform: translateX(-25%);
-    }
-
-    .SearchForm {
-        grid-column-gap: 1px;
-        overflow: hidden;
-        grid-template-columns: repeat(2, auto);
-    }
-
     .SearchForm .btn-search {
         margin-left: 50px;
         font-size: 0;
-        width: 50px;
-        height: 50px;
+        width: 45px;
+        height: 45px;
         background-image: url(../static/search.png);
         background-repeat: no-repeat;
         background-position: center;
         position: right;
     }
 
-    .SearchForm .InputCheckbox {
-        display: none;
-    }
-
-    .SearchForm .InputDivider {
-        display: none;
-    }
-
-    .SearchForm .InputLocation {
-        display: none;
-    }
-
-    .SearchForm .InputDivider {
-        display: none;
-    }
-
     .SearchForm .InputTitle {
         background-image: none;
-        padding-left: 16px;
+        padding-left: 1px;
+        padding-right: 1px;
     }
+
 }
 
-@media only screen and (min-width: 900px) and (max-width: 950px) {
-    .SearchGroup {
-        transform: translateX(-35%);
-    }
+@media only screen and (max-width : 500px) {
 
-    .SearchForm {
-        grid-column-gap: 1px;
-        overflow: hidden;
-        grid-template-columns: repeat(2, auto);
+    .InputGroup {
+        padding-top: 10px;
     }
 
     .SearchForm .btn-search {
-        margin-left: 50px;
-        font-size: 0;
-        width: 50px;
-        height: 50px;
-        background-image: url(../static/search.png);
-        background-repeat: no-repeat;
-        background-position: center;
-        position: right;
+        margin-left: 20px;
+        width: 35px;
+        height: 35px;
+        background-color: white;
     }
 
-    .SearchForm .InputCheckbox {
-        display: none;
+    .InputTitle input {
+        height: 13px;
+        font-size: 12pt;
     }
-
-    .SearchForm .InputDivider {
-        display: none;
-    }
-
-    .SearchForm .InputLocation {
-        display: none;
-    }
-
-    .SearchForm .InputDivider {
-        display: none;
-    }
-
-    .SearchForm .InputTitle {
-        background-image: none;
-        padding-left: 16px;
-    }
-}
-
-@media only screen and (min-width: 800px) and (max-width: 900px) {
-    .SearchGroup {
-        transform: translateX(-40%);
-    }
-
-    .SearchForm {
-        grid-column-gap: 1px;
-        overflow: hidden;
-        grid-template-columns: repeat(2, auto);
-    }
-
-    .SearchForm .btn-search {
-        margin-left: 50px;
-        font-size: 0;
-        width: 50px;
-        height: 50px;
-        background-image: url(../static/search.png);
-        background-repeat: no-repeat;
-        background-position: center;
-        position: right;
-    }
-
-    .SearchForm .InputCheckbox {
-        display: none;
-    }
-
-    .SearchForm .InputDivider {
-        display: none;
-    }
-
-    .SearchForm .InputLocation {
-        display: none;
-    }
-
-    .SearchForm .InputDivider {
-        display: none;
-    }
-
-    .SearchForm .InputTitle {
-        background-image: none;
-        padding-left: 16px;
-    }
-}
-
-@media only screen and (min-width: 800px) and (max-width: 850px) {
-    .SearchGroup {
-        transform: translateX(-40%);
-    }
-
-    .SearchForm {
-        grid-column-gap: 1px;
-        overflow: hidden;
-        grid-template-columns: repeat(2, auto);
-    }
-
-    .SearchForm .btn-search {
-        margin-left: 50px;
-        font-size: 0;
-        width: 50px;
-        height: 50px;
-        background-image: url(../static/search.png);
-        background-repeat: no-repeat;
-        background-position: center;
-        position: right;
-    }
-
-    .SearchForm .InputCheckbox {
-        display: none;
-    }
-
-    .SearchForm .InputDivider {
-        display: none;
-    }
-
-    .SearchForm .InputLocation {
-        display: none;
-    }
-
-    .SearchForm .InputDivider {
-        display: none;
-    }
-
-    .SearchForm .InputTitle {
-        background-image: none;
-        padding-left: 16px;
-    }
-}
-
-@media only screen and (min-width: 700px) and (max-width: 800px) {
-    .SearchGroup {
-        transform: translateX(-50%);
-    }
-
-    .SearchForm {
-        grid-column-gap: 1px;
-        overflow: hidden;
-        grid-template-columns: repeat(2, auto);
-    }
-
-    .SearchForm .btn-search {
-        margin-left: 50px;
-        font-size: 0;
-        width: 50px;
-        height: 50px;
-        background-image: url(../static/search.png);
-        background-repeat: no-repeat;
-        background-position: center;
-        position: right;
-    }
-
-    .SearchForm .InputCheckbox {
-        display: none;
-    }
-
-    .SearchForm .InputDivider {
-        display: none;
-    }
-
-    .SearchForm .InputLocation {
-        display: none;
-    }
-
-    .SearchForm .InputDivider {
-        display: none;
-    }
-
-    .SearchForm .InputTitle {
-        background-image: none;
-        padding-left: 16px;
-    }
-}
-
-@media only screen and (min-width: 600px) and (max-width: 700px) {
-    .SearchGroup {
-        transform: translateX(-55%);
-    }
-
-    .SearchForm {
-        grid-column-gap: 1px;
-        overflow: hidden;
-        grid-template-columns: repeat(2, auto);
-    }
-
-    .SearchForm .btn-search {
-        margin-left: 50px;
-        font-size: 0;
-        width: 50px;
-        height: 50px;
-        background-image: url(../static/search.png);
-        background-repeat: no-repeat;
-        background-position: center;
-        position: right;
-    }
-
-    .SearchForm .InputCheckbox {
-        display: none;
-    }
-
-    .SearchForm .InputDivider {
-        display: none;
-    }
-
-    .SearchForm .InputLocation {
-        display: none;
-    }
-
-    .SearchForm .InputDivider {
-        display: none;
-    }
-
-    .SearchForm .InputTitle {
-        background-image: none;
-        padding-left: 16px;
-    }
+    
 }

@@ -18,7 +18,7 @@ class JobGroup extends React.Component {
                 location: job.location,
             };
             return (
-                <Card job={dummy}/>
+                <Card job={dummy} key={dummy.id}/>
             );
         }); 
     }
@@ -27,14 +27,17 @@ class JobGroup extends React.Component {
         if(Object.keys(this.props.jobs).length === 0){
             return (
                 <div className="Loader">
+                    No Jobs Found
                     <Loader type="Grid" color="#00BFFF" height={80} width={80} />
                 </div>
             );
         }
         else{
             return (
-                <div className="JobGroup">
-                    {this.getJobs()}
+                <div className="GridContainer">
+                    <div className="JobGroup">
+                        {this.getJobs()}
+                    </div>
                 </div>
             );
         }        

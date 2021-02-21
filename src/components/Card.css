@@ -1,16 +1,21 @@
 .Card {
-    width: 100%;
+    width: 300px;
     display: flex;
     margin: 0 auto;
     max-width: 300px;
     position: relative;
     border-radius: 10px;
     flex-flow: column nowrap;
-    padding: 0 70px 15px 30px;
+    padding: 0 50px 10px 30px;
     background-color: white;
-    transition: 300ms ease-in-out;
+    transition: 0.8s cubic-bezier(0.2, 0.8, 0.2, 1);
     cursor: pointer;
     text-decoration: none;
+}
+
+.Card:hover {
+    transform: scale(1.1, 1.1);
+    box-shadow: 0 30px 60px rgba(0, 0, 0, 0.5);
 }
 
 .JobLogo {
